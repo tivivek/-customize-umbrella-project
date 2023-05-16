@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Umbrella Customizer</title>
+  </head>
+  <body>
+    <main class="main-container">
+      <div class="app-container">
+        <section class="image-container"> <!-- image container -->
+          <img
+            class="umbrella-image"
+            src="./assets/Blue umbrella.png"
+            alt="umbrella image"
+            data-image
+          />
+          <div class="logo-container">
+            <img
+              src=""
+              alt="logo image"
+              id="uploaded-image"
+              class="image"
+              style="display: none"
+            />
+          </div>
+        </section>
+         <section class="customizer-container"> <!--color Switches -->
+            <h2 class="customizer-header">Custom Umbrella</h2>
+
+            <div class="input-wrapper">
+              <div>
+                <input
+                  class="input-blue"
+                  type="radio"
+                  name="color"
+                  value="blue"
+                  onclick="changeColorOnCheck('blue')"
+                />
+                <div class="info-wrap">
+                  <a href="#" class="btn"></a>
+                </div>
+              </div>
+              <div>
+                <input
+                  class="input-yellow"
+                  type="radio"
+                  name="color"
+                  value="yellow"
+                  onclick="changeColorOnCheck('yellow')"
+                />
+              </div>
+              <div>
+                <input
+                  class="input-pink"
+                  type="radio"
+                  name="color"
+                  value="pink"
+                  onclick="changeColorOnCheck('pink')"
+                />
+              </div>
+            </div>
+          
+          <aside class="description-container">
+            <h3 class="description-header">Customize your Umbrella</h3>
+            <p class="first-para">Upload a logo for an instant preview</p>
+            <p class="second-para">
+              .png and .jpg files only. Max file is 5MB.
+            </p>
+
+            <input
+              type="file"
+              class="upload-file"
+              id="upload"
+              accept="image/png, image/jpg"
+            />
+
+            <label class="img-upload" for="upload">
+              <img
+                style="height: 25px; width: 25px"
+                class="upload-icon"
+                src="./assets/upload_icon.svg"
+                alt="upload icon image"
+              />
+              Upload Logo
+            </label>
+          </aside>
+        </section>
+      </div>
+    </main>
+    <script src="./script.js" defer></script>
+  </body>
+</html>
